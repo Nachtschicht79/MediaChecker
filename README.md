@@ -17,7 +17,13 @@ Die Startansicht verdichtet den Report auf die relevanten Kennwerte:
 - Video-Codec, Farbraum, Abtastung (z. B. 10 bit 4:2:2) und HDR
 - Datenrate, Audio-Layout und Start-Timecode
 
+  <img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 30)" src="https://github.com/user-attachments/assets/ad55b99e-7796-46a8-97a9-04e5bdd654d2" />
+
+
 Chips springen per Klick zum zugehörigen Stream.
+
+<img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 43)" src="https://github.com/user-attachments/assets/1d2bea8b-6e30-4b81-9bac-70338083ba21" />
+
 
 ## Technische Hinweise
 

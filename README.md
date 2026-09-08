@@ -63,3 +63,7 @@ Die Tech-Zusammenfassung ist ein Einzeiler zum Weitergeben in Tickets oder Chats
 - macOS 26, SwiftUI
 - gebündelte MediaInfo `libmediainfo` 26.05 (arm64)
 - Bundle-ID: `de.filmwork.NicosMediaChecker`
+
+## App herunterladen
+NicosMediaChecker.zip herunterladen und entpacken.
+Ggf. Gatekeeper ausschalten …

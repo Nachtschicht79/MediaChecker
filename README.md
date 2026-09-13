@@ -16,14 +16,10 @@ Die Startansicht verdichtet den Report auf die relevanten Kennwerte:
 - Bildrate inklusive CFR/VFR und Progressive/Interlaced
 - Video-Codec, Farbraum, Abtastung (z. B. 10 bit 4:2:2) und HDR
 - Datenrate, Audio-Layout und Start-Timecode
+- Lautheit nach EBU R128 (Integrated, True Peak, LRA), sobald die Tonspur dekodierbar ist
+- Bildpegel nach EBU R 103 und bei PQ gemessene MaxCLL/MaxFALL
 
-  <img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 30)" src="https://github.com/user-attachments/assets/ad55b99e-7796-46a8-97a9-04e5bdd654d2" />
-
-
-Chips springen per Klick zum zugehörigen Stream.
-
-<img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 43)" src="https://github.com/user-attachments/assets/1d2bea8b-6e30-4b81-9bac-70338083ba21" />
-
+Chips springen per Klick zum zugehörigen Stream. MediaInfo erscheint sofort; Lautheit und Bildpegel laufen danach im Hintergrund.
 
 ## Technische Hinweise
 
@@ -34,6 +30,10 @@ Die App prüft typische Fallstricke und zeigt sie als Hinweise (Info, Warnung, k
 - Rotations-Flag, fehlende Farbmetadaten, HDR ohne Transferkurve
 - 8-bit-Material, Samplerate abweichend von 48 kHz, Audio-Versatz
 - Drop-Frame-Timecode und nicht durchgehenden Timecode
+- Lautheit nicht messbar (etwa MXF, das AVFoundation nicht öffnet)
+- Bildpegel außerhalb der EBU-R-103-Preferred-Range, MaxCLL über den Metadaten
+
+Die Presets **HD 1080p25 Rec. 709** und **Broadcast MXF** prüfen Integrated −23,5…−22,5 LUFS und True Peak max. −1 dBTP. **UHD HDR HLG** prüft EBU R 103.
 
 ## Streams und Felder
 
@@ -62,7 +62,13 @@ Die Tech-Zusammenfassung ist ein Einzeiler zum Weitergeben in Tickets oder Chats
 
 - macOS 26, SwiftUI
 - gebündelte MediaInfo `libmediainfo` 26.05 (arm64)
+- libebur128 1.2.6 (MIT) für EBU R128, Bildpegel über AVFoundation
 
-## App herunterladen
-NicosMediaChecker.zip herunterladen und entpacken.
-Ggf. Gatekeeper ausschalten …
+
+
+  <img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 30)" src="https://github.com/user-attachments/assets/ad55b99e-7796-46a8-97a9-04e5bdd654d2" />
+
+
+
+<img width="1280" height="764" alt="Groß (Bildschirmfoto 2026-09-08 um 19 36 43)" src="https://github.com/user-attachments/assets/1d2bea8b-6e30-4b81-9bac-70338083ba21" />
+
